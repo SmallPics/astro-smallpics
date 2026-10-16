@@ -1,0 +1,52 @@
+{
+	"name": "astro-smallpics",
+	"version": "0.0.0",
+	"description": "Small Pics image service for Astro",
+	"type": "module",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SmallPics/astro-smallpics.git"
+	},
+	"files": [
+		"dist",
+		"src/components",
+		"README.md",
+		"LICENSE"
+	],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"./service": {
+			"types": "./dist/service.d.ts",
+			"default": "./dist/service.js"
+		}
+	},
+	"engines": {
+		"node": ">=22.16.0"
+	},
+	"scripts": {
+		"build": "tsc",
+		"test": "vitest run",
+		"check": "tsc --noEmit",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"pretest": "npm run build",
+		"prepack": "npm run build"
+	},
+	"devDependencies": {
+		"typescript": "^6.0.0",
+		"prettier": "^3.9.10",
+		"astro": "^7.3.8",
+		"@types/node": "^22.0.0",
+		"vitest": "^4.0.0"
+	},
+	"peerDependencies": {
+		"astro": "^7.3.8"
+	},
+	"dependencies": {
+		"smallpics-js": "file:../smallpics-js"
+	}
+}
