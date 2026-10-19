@@ -223,51 +223,51 @@ Use an array for options that accept multiple arguments:
 });
 ```
 
-| Query parameter | Plugin option name      | Accepted values                                                                                | Example                           |
-| --------------- | ----------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------- |
-| `or`            | `orientation`           | `0`, `90`, `180`, `270`, or `auto`                                                             | `or: 'auto'`                      |
-| `flip`          | `flip`                  | `v`, `h`, or `both`                                                                            | `flip: 'h'`                       |
-| `crop`          | `crop`                  | Named anchor, `entropy`, `face[,fallback]`, `facesarea[,fallback]`, or `[width, height, x, y]` | `crop: [400, 300, 10, 20]`        |
-| `w`             | `width`                 | Integer or decimal pixels, or relative dimensions                                              | `w: '65p'`                        |
-| `h`             | `height`                | Integer or decimal pixels, or relative dimensions                                              | `h: '50w'`                        |
-| `ar`            | `aspectRatio`           | `width:height`, decimal ratio, or `[dividend, divisor]`                                        | `ar: '16:9'`                      |
-| `fit`           | `fit`                   | `contain`, `max`, `fill`, `fill-max`, `stretch`, or `crop`                                     | `fit: 'crop'`                     |
-| `dpr`           | `devicePixelRatio`      | Integer or decimal                                                                             | `dpr: 1.5`                        |
-| `bri`           | `brightness`            | Integer brightness                                                                             | `bri: 10`                         |
-| `con`           | `contrast`              | Integer contrast                                                                               | `con: 15`                         |
-| `gam`           | `gamma`                 | Float gamma                                                                                    | `gam: 1.2`                        |
-| `sharp`         | `sharpen`               | Integer sharpen amount                                                                         | `sharp: 20`                       |
-| `blur`          | `blur`                  | Integer blur amount                                                                            | `blur: 5`                         |
-| `pixel`         | `pixelate`              | Integer pixelate amount                                                                        | `pixel: 8`                        |
-| `filt`          | `filter`                | `grayscale` or `sepia`                                                                         | `filt: 'grayscale'`               |
-| `mark`          | `watermarkPath`         | Watermark image path                                                                           | `mark: '/watermark.png'`          |
-| `markorigin`    | `watermarkOrigin`       | Watermark origin name                                                                          | `markorigin: 'default'`           |
-| `markw`         | `watermarkWidth`        | Integer, decimal, or relative width                                                            | `markw: '20w'`                    |
-| `markh`         | `watermarkHeight`       | Integer, decimal, or relative height                                                           | `markh: '20h'`                    |
-| `markfit`       | `watermarkFit`          | `contain`, `max`, `fill`, `fill-max`, `stretch`, or `crop`                                     | `markfit: 'contain'`              |
-| `markfp`        | `watermarkFocalPoint`   | Pixels, relative values, or `x:y` within the watermark                                         | `markfp: '20p:20p'`               |
-| `markzoom`      | `watermarkZoom`         | Numeric zoom from `1` to `100`                                                                 | `markzoom: 2`                     |
-| `markpad`       | `watermarkPadding`      | Pixels, relative values, or `x:y`                                                              | `markpad: '10:20'`                |
-| `markpos`       | `watermarkPosition`     | Named anchor, numeric coordinate, or pixel/relative `x:y` string                               | `markpos: '25p:50p'`              |
-| `markalpha`     | `watermarkAlpha`        | Integer alpha                                                                                  | `markalpha: 80`                   |
-| `bg`            | `background`            | Background color                                                                               | `bg: 'ffffff'`                    |
-| `border`        | `border`                | `[width, color, method]`; method is `overlay`, `shrink`, or `expand`                           | `border: [8, 'ffffff', 'expand']` |
-| `trim`          | `trim`                  | `auto`, `color`, `alpha`, or `either`                                                          | `trim: 'color'`                   |
-| `trim-color`    | `trimColor`             | Color to remove                                                                                | `'trim-color': 'ffffff'`          |
-| `trim-alpha`    | `trimAlpha`             | Alpha threshold, 0 to 255                                                                      | `'trim-alpha': 8`                 |
-| `trim-tol`      | `trimTolerance`         | Tolerance, 0 to 255                                                                            | `'trim-tol': 8`                   |
-| `trim-pad`      | `trimPadding`           | Padding in pixels or relative values[^relative-values]                                         | `'trim-pad': 8`                   |
-| `trim-md`       | `trimMeanDifference`    | Auto mean difference, 0 to 255                                                                 | `'trim-md': 8`                    |
-| `trim-sd`       | `trimStandardDeviation` | Auto standard deviation, 0 to 255                                                              | `'trim-sd': 8`                    |
-| `q`             | `quality`               | Integer quality                                                                                | `q: 80`                           |
-| `fm`            | `format`                | `strict`, `auto`, `jpg`, `jpeg`, `pjpg`, `png`, `gif`, `webp`, `avif`, or `jxl` [^format-selection]              | `fm: 'avif'`                      |
-| `interlace`     | `interlaced`            | Boolean                                                                                        | `interlace: true`                 |
-| `fp`            | `focalPoint`            | Pixels or relative x/y                                                                         | `fp: '25w:75h'`                   |
-| `zoom`          | `zoom`                  | Numeric, `face`, `facesarea`, optional numeric fallback                                        | `zoom: 'face,2.5'`                |
-| `zoompad`       | `zoomPadding`           | Pixels or relative x/y                                                                         | `zoompad: '10:20'`                |
-| `face`          | `face`                  | One-based face index                                                                           | `face: 1`                         |
-| `debug`         | `debug`                 | Boolean                                                                                        | `debug: true`                     |
-| `passthrough`   | `passthrough`           | Boolean; false removes the flag unless `transformSvgs` is false                                | `passthrough: true`               |
+| Query parameter | Plugin option name      | Accepted values                                                                                     | Example                           |
+| --------------- | ----------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------- |
+| `or`            | `orientation`           | `0`, `90`, `180`, `270`, or `auto`                                                                  | `or: 'auto'`                      |
+| `flip`          | `flip`                  | `v`, `h`, or `both`                                                                                 | `flip: 'h'`                       |
+| `crop`          | `crop`                  | Named anchor, `entropy`, `face[,fallback]`, `facesarea[,fallback]`, or `[width, height, x, y]`      | `crop: [400, 300, 10, 20]`        |
+| `w`             | `width`                 | Integer or decimal pixels, or relative dimensions                                                   | `w: '65p'`                        |
+| `h`             | `height`                | Integer or decimal pixels, or relative dimensions                                                   | `h: '50w'`                        |
+| `ar`            | `aspectRatio`           | `width:height`, decimal ratio, or `[dividend, divisor]`                                             | `ar: '16:9'`                      |
+| `fit`           | `fit`                   | `contain`, `max`, `fill`, `fill-max`, `stretch`, or `crop`                                          | `fit: 'crop'`                     |
+| `dpr`           | `devicePixelRatio`      | Integer or decimal                                                                                  | `dpr: 1.5`                        |
+| `bri`           | `brightness`            | Integer brightness                                                                                  | `bri: 10`                         |
+| `con`           | `contrast`              | Integer contrast                                                                                    | `con: 15`                         |
+| `gam`           | `gamma`                 | Float gamma                                                                                         | `gam: 1.2`                        |
+| `sharp`         | `sharpen`               | Integer sharpen amount                                                                              | `sharp: 20`                       |
+| `blur`          | `blur`                  | Integer blur amount                                                                                 | `blur: 5`                         |
+| `pixel`         | `pixelate`              | Integer pixelate amount                                                                             | `pixel: 8`                        |
+| `filt`          | `filter`                | `grayscale` or `sepia`                                                                              | `filt: 'grayscale'`               |
+| `mark`          | `watermarkPath`         | Watermark image path                                                                                | `mark: '/watermark.png'`          |
+| `markorigin`    | `watermarkOrigin`       | Watermark origin name                                                                               | `markorigin: 'default'`           |
+| `markw`         | `watermarkWidth`        | Integer, decimal, or relative width                                                                 | `markw: '20w'`                    |
+| `markh`         | `watermarkHeight`       | Integer, decimal, or relative height                                                                | `markh: '20h'`                    |
+| `markfit`       | `watermarkFit`          | `contain`, `max`, `fill`, `fill-max`, `stretch`, or `crop`                                          | `markfit: 'contain'`              |
+| `markfp`        | `watermarkFocalPoint`   | Pixels, relative values, or `x:y` within the watermark                                              | `markfp: '20p:20p'`               |
+| `markzoom`      | `watermarkZoom`         | Numeric zoom from `1` to `100`                                                                      | `markzoom: 2`                     |
+| `markpad`       | `watermarkPadding`      | Pixels, relative values, or `x:y`                                                                   | `markpad: '10:20'`                |
+| `markpos`       | `watermarkPosition`     | Named anchor, numeric coordinate, or pixel/relative `x:y` string                                    | `markpos: '25p:50p'`              |
+| `markalpha`     | `watermarkAlpha`        | Integer alpha                                                                                       | `markalpha: 80`                   |
+| `bg`            | `background`            | Background color                                                                                    | `bg: 'ffffff'`                    |
+| `border`        | `border`                | `[width, color, method]`; method is `overlay`, `shrink`, or `expand`                                | `border: [8, 'ffffff', 'expand']` |
+| `trim`          | `trim`                  | `auto`, `color`, `alpha`, or `either`                                                               | `trim: 'color'`                   |
+| `trim-color`    | `trimColor`             | Color to remove                                                                                     | `'trim-color': 'ffffff'`          |
+| `trim-alpha`    | `trimAlpha`             | Alpha threshold, 0 to 255                                                                           | `'trim-alpha': 8`                 |
+| `trim-tol`      | `trimTolerance`         | Tolerance, 0 to 255                                                                                 | `'trim-tol': 8`                   |
+| `trim-pad`      | `trimPadding`           | Padding in pixels or relative values[^relative-values]                                              | `'trim-pad': 8`                   |
+| `trim-md`       | `trimMeanDifference`    | Auto mean difference, 0 to 255                                                                      | `'trim-md': 8`                    |
+| `trim-sd`       | `trimStandardDeviation` | Auto standard deviation, 0 to 255                                                                   | `'trim-sd': 8`                    |
+| `q`             | `quality`               | Integer quality                                                                                     | `q: 80`                           |
+| `fm`            | `format`                | `strict`, `auto`, `jpg`, `jpeg`, `pjpg`, `png`, `gif`, `webp`, `avif`, or `jxl` [^format-selection] | `fm: 'avif'`                      |
+| `interlace`     | `interlaced`            | Boolean                                                                                             | `interlace: true`                 |
+| `fp`            | `focalPoint`            | Pixels or relative x/y                                                                              | `fp: '25w:75h'`                   |
+| `zoom`          | `zoom`                  | Numeric, `face`, `facesarea`, optional numeric fallback                                             | `zoom: 'face,2.5'`                |
+| `zoompad`       | `zoomPadding`           | Pixels or relative x/y                                                                              | `zoompad: '10:20'`                |
+| `face`          | `face`                  | One-based face index                                                                                | `face: 1`                         |
+| `debug`         | `debug`                 | Boolean                                                                                             | `debug: true`                     |
+| `passthrough`   | `passthrough`           | Boolean; false removes the flag unless `transformSvgs` is false                                     | `passthrough: true`               |
 
 Dimensions accept decimal pixels and `p`, `w`, or `h` units.[^relative-values] Paired values accept serialized `x:y` strings.
 
