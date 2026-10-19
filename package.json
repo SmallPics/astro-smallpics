@@ -1,9 +1,12 @@
 {
-	"name": "astro-smallpics",
+	"name": "@smallpics/astro",
 	"version": "0.1.0",
 	"description": "Small Pics image service for Astro",
 	"type": "module",
 	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/SmallPics/astro-smallpics.git"
@@ -47,6 +50,6 @@
 		"astro": "^7.3.8"
 	},
 	"dependencies": {
-		"smallpics-js": "^0.1"
+		"@smallpics/smallpics-js": "^0.1"
 	}
 }

@@ -5,7 +5,7 @@ Add [Small Pics](https://www.smallpics.io) image CDN and transforms to Astro.
 ## Installation
 
 ```sh
-npm install astro-smallpics
+npm install @smallpics/astro
 ```
 
 ## Configuration
@@ -39,7 +39,7 @@ For signing or SVG settings, use an entry in `sources`, even with a single origi
 
 ```js
 import { defineConfig } from 'astro/config';
-import smallpics from 'astro-smallpics';
+import smallpics from '@smallpics/astro';
 
 export default defineConfig({
 	integrations: [
@@ -65,7 +65,7 @@ See an example of selecting a source in [Select a Source](#select-a-source) belo
 
 ```js
 import { defineConfig } from 'astro/config';
-import smallpics from 'astro-smallpics';
+import smallpics from '@smallpics/astro';
 
 export default defineConfig({
 	integrations: [
@@ -198,7 +198,7 @@ The component also supplies a fallback `src`.
 
 All the transform options supported by the Small Pics transform API are supported by this integration. Take a look at the [Small Pics docs](https://www.smallpics.io/docs/) for more detailed information about each parameter.
 
-Transform options can use either the Small Pics URL param key or the option name used by `smallpics-js`. For example, `q` and `quality` are equivalent.
+Transform options can use either the Small Pics URL param key or the option name used by `@smallpics/smallpics-js`. For example, `q` and `quality` are equivalent.
 
 Pass these options through `smallpics` on an image or through global and source `defaultParams`.
 

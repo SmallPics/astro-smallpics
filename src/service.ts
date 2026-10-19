@@ -3,8 +3,8 @@ import {
 	UrlBuilder,
 	normalizeOptions,
 	type TransformOptions,
-} from 'smallpics-js';
-import { signUrl } from 'smallpics-js/server';
+} from '@smallpics/smallpics-js';
+import { signUrl } from '@smallpics/smallpics-js/server';
 import { resolveSource, type SmallPicsConfig } from './index.js';
 
 const positive = (value: unknown): value is number =>

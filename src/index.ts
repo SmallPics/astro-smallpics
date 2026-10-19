@@ -1,9 +1,9 @@
 import type { AstroIntegration } from 'astro';
-import { deliveryUrl, type TransformOptions } from 'smallpics-js';
+import { deliveryUrl, type TransformOptions } from '@smallpics/smallpics-js';
 
-export { UrlBuilder, Options, normalizeOptions } from 'smallpics-js';
+export { UrlBuilder, Options, normalizeOptions } from '@smallpics/smallpics-js';
 
-export type { TransformOptions, TrimMode } from 'smallpics-js';
+export type { TransformOptions, TrimMode } from '@smallpics/smallpics-js';
 
 export interface SourceConfig {
 	baseUrl: string;
@@ -109,11 +109,13 @@ export default function smallpics(config: SmallPicsConfig): AstroIntegration {
 	sourcesFor(config);
 
 	return {
-		name: 'astro-smallpics',
+		name: '@smallpics/astro',
 		hooks: {
 			'astro:config:setup': ({ updateConfig }) => {
 				updateConfig({
-					image: { service: { entrypoint: 'astro-smallpics/service', config } },
+					image: {
+						service: { entrypoint: '@smallpics/astro/service', config },
+					},
 				});
 			},
 		},

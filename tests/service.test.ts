@@ -143,7 +143,7 @@ test('integration installs the external service', () => {
 		},
 	});
 
-	assert.equal(config.image.service.entrypoint, 'astro-smallpics/service');
+	assert.equal(config.image.service.entrypoint, '@smallpics/astro/service');
 });
 
 test('maps Astro crop positions and scale-down fit', async () => {

@@ -1,8 +1,8 @@
 import smallpics, {
 	type SmallPicsConfig,
 	type SourceConfig,
-} from 'astro-smallpics';
-import service from 'astro-smallpics/service';
+} from '@smallpics/astro';
+import service from '@smallpics/astro/service';
 import type { AstroIntegration, ExternalImageService } from 'astro';
 
 const source: SourceConfig = {
@@ -26,5 +26,5 @@ void integration;
 
 void imageService;
 
-const trimMode: import('astro-smallpics').TrimMode = 'either';
+const trimMode: import('@smallpics/astro').TrimMode = 'either';
 void trimMode;
